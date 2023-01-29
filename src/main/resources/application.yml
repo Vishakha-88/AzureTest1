@@ -1,0 +1,19 @@
+spring:
+  cloud:
+    azure:
+      active-directory:
+        b2c:
+          enabled: true
+          base-uri: https://TIAACREF.b2clogin.com/TIAACREF.onmicrosoft.com/
+           #https://<your-tenant-initial-domain-name>.b2clogin.com/<your-tenant-initial-domain-name>.onmicrosoft.com/ 
+            
+          credential:
+            client-id: 2c5b5e13-7421-429e-87c0-1824c2002d75  #<your-application-ID>
+            client-secret: '<secret-value>'
+          login-flow: sign-up-or-sign-in
+          logout-success-url: <your-logout-success-URL>
+          user-flows:
+            sign-up-or-sign-in: <your-sign-up-or-sign-in-user-flow-name> 
+            profile-edit: <your-profile-edit-user-flow-name> 
+            password-reset: <your-password-reset-user-flow-name> 
+          user-name-attribute-name: <your-user-name-attribute-name>
